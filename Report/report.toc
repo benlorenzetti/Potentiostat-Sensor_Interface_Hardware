@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
+\contentsline {section}{\numberline {2}Methods}{2}{section.2}
+\contentsline {section}{\numberline {3}Breakout Board}{2}{section.3}
+\contentsline {subsection}{\numberline {3.1}Multiplexer and Sensor Interfaces}{2}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Physical Constraints}{2}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Schematic Diagram}{2}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Board Design}{2}{subsection.3.4}
+\contentsline {section}{\numberline {4}Packaging}{2}{section.4}
+\contentsline {subsection}{\numberline {4.1}Initial Base and Lid Designs}{2}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Revision History}{2}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}3D Printing and Tapping}{2}{subsection.4.3}
