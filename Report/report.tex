@@ -21,7 +21,7 @@
 
 \documentclass[
 10pt, % Main document font size
-a4paper, % Paper type, use 'letterpaper' for US Letter paper
+letterpaper, % Paper type, use 'letterpaper' for US Letter paper
 oneside, % One page layout (no page indentation)
 %twoside, % Two page layout (page indentation for binding and different headers)
 headinclude,footinclude, % Extra spacing for the header and footer
@@ -100,7 +100,7 @@ and a breakout board with protective packaging was developed to provide a clean 
 \section{Introduction}
 
 BioMicroSystems Lab is developing point-of-care electrochemical sensors for measuring heavy metal concentrations in environmental samples,
-such as manganese and lead in lake water \cite{Figueredo:2009dg}.
+such as manganese and lead in lake water \cite{bms-article}.
 Three electrodes are submerged in the sample and a potential is applied between two electrodes.
 A different pair of two electrodes is used to measure current.
 At some voltage level, an oxidation-reduction reaction between the metal of interest and the electrode surface becomes favorable.
@@ -139,8 +139,24 @@ To realize these advantages, a small, portable potentiostat is needed with a sim
 %\item Third item in a list
 %\end{enumerate}
 
+An OEM potentiostat board measuring only 2" x 1.35" was purchased from PalmSens, called EmStat.
+Also from PalmSens, a Multiplexer was purchased that allows EmStat to switch between multiple sensors.
+See figure \ref{emstat}.
+However, before these could be used in the field,
+a breakout board for connecting the Multiplexer to the BMS Lab sensors and protective packaging was needed.
+
+\begin{figure}[tb]
+\centering
+\subfloat[EmStat Potentiostat \cite{palmsens-website}.]{\includegraphics[width=0.45\columnwidth]{EmStat}}	\quad
+\subfloat[Multiplexer Pinout Diagram \cite{mux-documentation}.]{\includegraphics[width=0.45\columnwidth]{MUX_Pinout_Diagram}}	\\
+\subfloat[EmStat and Multiplexer Connected \cite{palmsens-website}.]{\includegraphics[width=0.45\columnwidth]{EmStat_with_Multiplexer}}	\quad
+\subfloat[Multiplexer Pinout Schematic. \cite{mux-documentation}]{\includegraphics[width=0.45\columnwidth]{MUX_Pinout_Schematic}}
+\caption{EmStat and Multiplexer from PalmSens.}
+\label{emstat}
+\end{figure}
+
 %----------------------------------------------------------------------------------------
-%	RESULTS AND DISCUSSION
+%	BREAKOUT BOARD
 %----------------------------------------------------------------------------------------
 
 \section{Breakout Board}
