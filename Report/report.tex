@@ -141,6 +141,7 @@ The possible advantages of the point-of-care electrodes being developed by BMS L
 low cost, portability, measurement speed, and simplicity for non-technical operators.
 To realize these advantages, a small, portable potentiostat is needed with a simple user interface.
 
+\newpage
 %------------------------------------------------
 
 \section*{Method}
@@ -161,7 +162,16 @@ The EmStat--Multiplexer connection and the external interface towards the sensor
 
 The external interface from the Multiplexer is a standard 0.1" header but the sensors are made to be inserted into a USB receptacle.
 To make this simple for the end user,
-a custom breakout board was made to fit in the space between the EmStat and Multiplexer boards.
+a custom breakout board was made to fit in the space between the EmStat and Multiplexer boards;
+see figure \ref{breakout-board-sandwich}
+
+\begin{figure}[tb]
+\centering
+\subfloat[Breakout Board]{\includegraphics[width=0.4\columnwidth]{breakout-board}}	\quad
+\subfloat[PCB Sandwich...tasty]{\includegraphics[width=0.5\columnwidth]{three-board-assembly}}
+\caption{Breakout Board fits between EmStat and MUX}
+\label{breakout-board-sandwich}
+\end{figure}
 
 The breakout board was designed in CadSoft Eagle and the \texttt{.brd} file was sent to OSH Park LLC for manufacture.
 The Eagle project and part libraries used can be found in the directory \texttt{PCB\_Boards/}.
@@ -189,7 +199,7 @@ Qty.	&	Component	&	Man. Part \#	\\
 \end{table}
 
 The x-y coordinates used in aligning the EmStat, Multiplexer, and breakout board are shown in appendix \ref{x-y-coordinates-appendix}.
-The schematic diagram for the breakout board and a transparent view from Eagle are incluced in appendix \ref{eagle-appendix}.
+The schematic diagram for the breakout board and a transparent view from Eagle are incluced in appendices \ref{breakout-board-schematic} and \ref{breakout-board-top-view}
 
 The packaging was designed in SolidWorks to be 3D-printed in two parts: a base and a lid.
 In addition to the base and lid, six size \#3-48, 1.25" long machine screws and \#3-48 tapping equipment are needed for assembly.
@@ -225,48 +235,91 @@ One allows a USB-style sensor to be extended away from the potentiostat system b
 Another allows USB-style sensors to be easily connected to the WaveNow potentiostat.
 The third allows USB-style sensors to be connected to aligator clips for electroplating, etc.
 
-Designs for these three interface boards are included in appendix \ref{interface-boards-appendix}.
-
-%------------------------------------------------
-
-\section{Results}
-
-\begin{figure}[tb]
+\begin{figure}[ht]
 \centering
-\subfloat[Breakout Board]{\includegraphics[width=0.45\columnwidth]{breakout-board}}	\quad
-\subfloat[PCB Sandwich...tasty]{\includegraphics[width=0.45\columnwidth]{three-board-assembly}}
-\caption{Breakout Board for EmStat/MUX}
+\includegraphics[width=0.4\columnwidth]{interface-board}
+\caption{1 of 3 Sensor Interface Boards}
 \end{figure}
 
-\lipsum[7] % Dummy text
+\newpage
+%------------------------------------------------
 
-\begin{table}
-\caption{Random table}
+\section*{Results}
+
+The enclosure base and lid were printed several times in house on the MakerBot and once outside by Shapeways.
+Printing with Shapeways cost ~\$60 and had a lead time of three weeks.
+However, the result was a much nicer product, as shown in figure \ref{print-comparison}.
+
+\begin{figure}[ht]
 \centering
-\begin{tabular}{llr}
-\toprule
-\multicolumn{2}{c}{Name} \\
-\cmidrule(r){1-2}
-First name & Last Name & Grade \\
-\midrule
-John & Doe & $7.5$ \\
-Richard & Miles & $2$ \\
-\bottomrule
-\end{tabular}
-\end{table}
+\includegraphics[width=1\columnwidth]{packaging-comparison}
+\caption{Packaging Printed on MakerBot (left) and by Shapeways (right)}
+\label{print-comparison}
+\end{figure}
+
+The parts printed by Shapeways had much more precision than the MakerBot,
+to the extent that no hand filing or drilling had to be done just to get the parts to fit together.
+The surface finish was also many times better.
+
+Furthermore, tapping will be significantly better with the Shapeways base because the tolerance
+for the through hole is much tighter and the enclosure is not hollow beyond the cylindrical face.
+
+\section*{Conclusions}
+
+All of the goals of the hardware are met by assembling the breakout board and 3D-printed
+enclosure with the EmStat and Multiplexer boards from PalmSens.
+For a higher quality product, it is recommended that the enclosure be reprinted
+by an outside printing service such as Shapeways.
 
 %------------------------------------------------
 
-\section*{Section 2}
+\newpage
+\section*{Appendices}
 
-\lipsum[8] % Dummy text
+The following are attached:
+\begin{enumerate}
+\item Tapping Instructions
+\label{tapping-appendix}
+\item X-Y Alignment of the EmStat, Multiplexer, and Breakout Boards
+\label{x-y-coordinates-appendix}
+\item Breakout Board Schematic Diagram
+\label{breakout-board-schematic}
+\item Breakout Board Top View
+\label{breakout-board-top-view}
+\item Enclosure Drawings--Including Revision History
+\label{enclosure-drawing-appendix}
+\item Interface Boards
+\label{interface-boards-appendix}
+\end{enumerate}
 
-\begin{description}
-\item[First] This is the first item
-\item[Last] This is the last item
-\end{description}
+%------------------------------------------------
 
-\lipsum[9] % Dummy text
+\section{Tapping Instructions}
+
+The base part of the enclosure needs to be tapped six times--once for each assembly screw.
+The screws have 3-48 threading,
+which means they have an outermost diameter of 0.099" with 48 threads per inch.
+
+The machine shop in 407 Rhodes has all of the tapping equipment needed.
+Ron Hudepohl is very helpful and can show you where all the equipment is.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.7\columnwidth]{tapping-equipment}
+\caption{Equipment for Tapping}
+\end{figure}
+
+It is much better to go to the shop than to purchase the tapping equipment because tapping
+is easier if you can mount the enclosure and keep the tap vertically aligned.
+
+If you mount the base part on mill with a digital x-y readout, figure \ref{tap-locations} will help.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.9\columnwidth]{tap-location-drawing}
+\caption{Coordinates for Tapping}
+\label{tap-locations}
+\end{figure}
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
@@ -274,12 +327,21 @@ Richard & Miles & $2$ \\
 
 \begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
 
-\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
-Figueredo, A.~J. and Wolf, P. S.~A. (2009).
-\newblock Assortative pairing and life history strategy - a cross-cultural
-  study.
-\newblock {\em Human Nature}, 20:317--330.
- 
+\bibitem[Kang et al., 2014]{bms-article}
+Wenjing Kang, Xing Pei, Adam Bange, Erin Haynes, William Heineman, and Ian Papautsky.
+\newblock Copper-Based Electrochemical Sensor with Palladium Electrode for Cathodic Stripping Voltammetry of Manganese
+\newblock {\em Analytical Chemistry}, 2014, 86, 12070--12077.
+
+\bibitem[Sukhavasi, S., 2011]{zinc-masters-defense}
+Sowmya Sukhavasi.
+\newblock Zinc Chip Reader for Point-Of-Care Quantification of Zinc in Blood Serum
+\newblock {\em University of Cincinnati}, Master's Thesis, 2011.
+
+\bibitem[PalmSens, 2014]{mux-documentation}
+PalmSens Compact Electrochemical Interfaces.
+\newblock EmStat$^{3}$ Connecting to MUX8
+\newblock {\em PalmSens Compact Electrochemical Interfaces}, Product Documentation, Revision: July 2014.
+
 \end{thebibliography}
 
 %----------------------------------------------------------------------------------------
